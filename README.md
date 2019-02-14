@@ -121,7 +121,7 @@
 ### Branch
 
 * protect the main branches from direct commits [gitflow workflow](https://nvie.com/posts/a-successful-git-branching-model/), [branch protection](https://help.github.com/articles/configuring-protected-branches/)
-* protect your project (master branch를 보호하기 위해 pull requests로만 merge 되도록 하자)
+* protect your project (master branch)
 * for every new feature, start a new branch named after that feature
 * once the branch is stable, create a pull request
 
@@ -136,11 +136,11 @@
 ### Pull Request
 
 * always pull the latest updates (for avoid resolving unnecessary merge conflicts)
-* keep history consistent ([squash](https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%8B%A8%EC%9E%A5%ED%95%98%EA%B8%B0)브랜치에서 작업하고 병합하기 전, 커밋을 하나로 스쿼시 하는 것이 좋다. 일관되고 쉽게 읽을 수 있게 만들어준다)
-* rebase your branches periodically (큰 기능을 작업할때, 브랜치를 정기적으로 리베이스해 병합을 수행할때 충돌을 피하자)
+* keep history consistent ([squash](https://git-scm.com/book/ko/v1/Git-%EB%8F%84%EA%B5%AC-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EB%8B%A8%EC%9E%A5%ED%95%98%EA%B8%B0)
+* rebase your branches periodically
 
-* choose the right developers for the job (팀원중 가장 숙련된 개발자에게만 pull requests를 merge할 권한을 부여하자)
-* the more approvals, the better (둘 이상의 개발자가 승인했을때 pull requests가 merge 되도록 하자)
+* choose the right developers for the job
+* the more approvals, the better
 * review other's code independently
 
 ### Useful `.gitconfig` aliases
@@ -151,21 +151,19 @@ alias.lola=log --graph --decorate --pretty=oneline --abbrev-commit --all
 alias.hist = log --graph --pretty=format:'%h %ad | %s%d [%an]' --date=short
 ```
 
-### `.gitignore`
-
-* create a meaningful .gitignore file for your projects[ref](https://gitignore.io/)
+### create a meaningful `.gitignore` file for your projects[ref](https://gitignore.io/)
 
 ### with Jira
 
-* make time tracking easier (JIRA와 같은 프로젝트 추적 소프트웨어를 사용할 때 진행 상황을 추적하기가 쉽게 티켓에 branch 이름을 추가하는게 좋다)
+* make time tracking easier
 
 ## Integration
 
 ### Code Quality
 
 * write better code([learn about code review](https://github.com/features/code-review))
-* [`pylint`](https://www.pylint.org/), [`pycodestyle` aka `pep8`](https://pypi.python.org/pypi/pep8) for Python
-* [Shellcheck](https://github.com/koalaman/shellcheck) may be useful for `bash` scripts)
+* [`pylint`](https://www.pylint.org/), pycodestyle aka [`pep8`](https://pypi.python.org/pypi/pep8) for Python
+* [Shellcheck](https://github.com/koalaman/shellcheck) may be useful for `bash` scripts
 
 * [`Landscape.io`](https://landscape.io/)
 
